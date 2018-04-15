@@ -1,0 +1,40 @@
+{
+  "access" : {
+    "elizabelenko_icloud_com" : "password1",
+    "mariapoliss_mail_ru" : "password2"
+  },
+  "chats" : {
+    "156" : {
+      "messages" : {
+        "content" : "Hello, Maria!",
+        "reciever" : "mariapoliss",
+        "sender" : "elizabel",
+        "time" : "12 May 2018 12:00"
+      }
+    }
+  },
+  "users" : {
+    "elizabelenko_icloud_com" : {
+      "contacts" : {
+        "mariapoliss" : {
+          "chatId" : 156
+        }
+      },
+      "login" : "elizabel",
+      "name" : "Eliza",
+      "status" : "busy",
+      "surname" : "Belenko"
+    },
+    "mariapoliss_mail_ru" : {
+      "contacts" : {
+        "elizabel" : {
+          "chatId" : 156
+        }
+      },
+      "login" : "mariapoliss",
+      "name" : "Maria",
+      "status" : "online",
+      "surname" : "Polischuk"
+    }
+  }
+}
