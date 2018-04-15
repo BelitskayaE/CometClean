@@ -1,0 +1,42 @@
+{
+  "contacts": [
+    {
+      "user": "mariapoliss@mail.ru",
+      "friends": [
+        {
+          "email": "elizabelenko@icloud.com"
+        },
+        {
+          "email": "kidrauhl@yandex.ru"
+        }
+      ]
+    },
+    {
+      "user": "elizabelenko@icloud.com",
+      "friends": [
+        {
+          "email": "thiefslaw69@rambler.ru"
+        },
+        {
+          "email": "mariapoliss@mail.ru"
+        }
+      ]
+    },
+    {
+      "user": "thiefslaw69@rambler.ru",
+      "friends": [
+        {
+          "email": "elizabelenko@icloud.com"
+        }
+      ]
+    },
+    {
+      "user": "kidrauhl@yandex.ru",
+      "friends": [
+        {
+          "email": "mariapoliss@mail.ru"
+        }
+      ]
+    }
+  ]
+}

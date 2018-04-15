@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Hind+Siliguri|Raleway|Rammetto+One");
+body {/*there must be nooo body*/
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  background: url("https://sky-wall.ru/uploads/source/2016/07/preview/9e3738016c7423664cdaf9b57530c8c6.jpg");
+}
+img {
+  width: 50px;
+  height: 50px;
+  top: -68px;
+  position: absolute;
+  z-index: 0;
+  display: flex;
+}
+#allLogo {
+  top: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-width: 130px;
+  border-right-width: 130px;
+  border-top: 100px solid rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+}
+#logo {
+  font-size: 23px;
+  font-family: 'Rammetto One', cursive;
+  position: absolute;
+  display: flex;
+  top: -115px;
+  color: #0489b1;
+  letter-spacing: 5px;
+  z-index: 3;
+}
+#vhodichi {
+  justify-content: center;
+}
+.circle-block {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  justify-content: center;
+  top: 14.6%;
+  -webkit-box-shadow: inset 2px -1px 24px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 2px -1px 24px 5px rgba(0,0,0,0.75);
+  box-shadow: inset 2px -1px 24px 5px rgba(0,0,0,0.75);
+}
+.vhod-input {
+  width: 190px;
+  height: 35px;
+  border-radius: 42px;
+  background: url("../../images/fon4.png");
+  border: none;
+  box-shadow: inset 0px 0px 8px rgba(0,0,0,0.5);
+  outline: none;
+  transition: 0.3s linear;
+  position: absolute;
+  padding-left: 15px;
+}
+.vhod-input:focus {
+  width: 240px;
+}
+#inp1 {
+  top: 35%;
+}
+#inp2 {
+  top: 48%;
+}
+#inp3 {
+  top: 25%;
+}
+#inp4 {
+  top: 35%;
+}
+#inp5 {
+  top: 45%;
+}
+#inp6 {
+  top: 55%;
+}
+#inp7 {
+  top: 65%;
+}
+#inp8 {
+  top: 45%;
+}
+#inp9 {
+  top: 40%;
+}
+#inp10 {
+  top: 30%;
+}
+#inp11 {
+  top: 45%;
+}
+h1 {
+  color: #0489b1;
+  position: absolute;
+  top: 10%;
+  font-family: Raleway;
+  font-size: 30px;
+}
+h2 {
+  color: #0489b1;
+  position: absolute;
+  top: 15%;
+  font-family: Raleway;
+  font-size: 20px;
+}
+.fpass {
+  display: block;
+  margin: auto;
+  padding: 1rem 1.25rem;
+  font-family: Raleway;
+  font-size: 15px;
+  text-decoration: none;
+  color: #0489b1;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  z-index: 1;
+  cursor: pointer;
+}
+.fpass:after {
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 1.25rem;
+  left: 1.25rem;
+  background-color: #0489b1;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  top: 7px;
+  z-index: -1;
+  border-radius: 42px;
+}
+.fpass:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.fpass:hover:after {
+  right: 0;
+  left: 0;
+  height: 70%;
+}
+#turningback {
+  top: 90%;
+}
+#registr {
+  top: 75%;
+}
+#pass {
+  top: 85%;
+}
+.btns2 {
+  position: absolute;
+  width: 100px;
+  height: 28px;
+  perspective: 600px;
+  top: 78%;
+}
+.btns {
+  position: absolute;
+  width: 100px;
+  height: 28px;
+  perspective: 600px;
+  top: 63%;
+}
+.btns #abtn {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.btns #abtn .front,
+.btns #abtn .back {
+  margin: 0;
+  width: 100px;
+  height: auto;
+  font-family: Raleway;
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 42px;
+  cursor: pointer;
+}
+.btns #abtn .front {
+  background-color: #385134;
+  color: #fff;
+  transform: rotateY(0) translateZ(24px);
+}
+.btns #abtn .back {
+  background-color: rgba(255,255,255,0);
+  color: rgba(34,34,34,0);
+  transform: rotateX(90deg) translateZ(24px);
+  overflow: hidden;
+}
+.btns #abtn .back:after {
+  content: '';
+  position: absolute;
+  top: -32%;
+  left: -10%;
+  width: 120%;
+  height: 50%;
+  background: #222;
+  transform: rotate(8deg);
+  transition: all 0.5s ease;
+  transition-delay: 0.15s;
+}
+.btns #abtn:hover {
+  transform: translateZ(-24px) rotateX(-90deg);
+}
+.btns #abtn:hover .front {
+  background: #000;
+  transition: all 0.8s ease;
+}
+.btns #abtn:hover .back {
+  color: #fff;
+  transition: color 0.4s linear;
+  background: #8a71a7;
+}
+.btns #abtn:hover .back:after {
+  transform: rotate(6deg) translate(100px, -18px);
+}
+#grust {
+  position: absolute;
+  top: 35%;
+  height: 90px;
+  width: 90px;
+}
+
+button,a {
+  outline:0 none !important;
+  color: #0489b1;
+  text-decoration: none;
+}
+button:hover, a:hover{
+  cursor: pointer;
+  color: #fff;
+}

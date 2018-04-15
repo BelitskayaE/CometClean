@@ -1,0 +1,153 @@
+#contacts{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10%;
+  height: 70%;
+}
+
+#contacts > div{
+  margin: 8px;
+}
+
+.name_of_block{
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Acme', cursive;
+  color:#8a71a7;
+  letter-spacing: 2px;
+}
+
+.search{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position:relative;
+  left:10px;
+
+}
+
+
+
+.new_message_icon{
+  cursor:pointer;
+  display:flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  position:relative;
+  box-sizing: content-box;
+  background-color:#59013C;
+  border-radius:50%;
+  padding:2px 0px 0px 5px;
+  color: white;
+  letter-spacing: 3px;
+  font: bold 10px Acme;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  align-items:center;
+
+}
+
+.plus{
+  color:olive;
+  font-size:30px;
+}
+
+#searchbtn{
+  width:20px;
+  height: 25px;
+  cursor:pointer;
+  border: none;
+  position: relative;
+  top: -1px;
+  right: 5px;
+  display:flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  align-items:center;
+  -webkit-align-items:center;
+  background:url("/src/images/poisk.png");
+}
+
+
+.search button img{
+  width: 20px;
+  height: 20px;
+  border: none;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  display:flex;
+  display:-webkit-flex;
+  display:-moz-flex;
+  align-items:center;
+  -webkit-align-items:center;
+  outline:none;
+}
+
+
+.icons{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.friends{
+  height: 60%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  transform: translateY(11px);
+  opacity: 0.904857;
+}
+
+
+
+.friend{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  width: 230px;
+  margin: 20px 0px 20px 35px;
+}
+
+
+#new_chat{
+  text-align: center;
+  position: relative;
+
+
+}
+
+button{
+  border-radius: 42px;
+  width:auto;
+
+
+  border:none;
+
+}
+
+#new_chat button{
+  width:260px;
+  height:30px;
+  font-family: 'Hind Siliguri', cursive;
+
+}
+
+#new_chat button:hover{
+
+  cursor: pointer;
+  -webkit-box-shadow: inset 1px -2px 27px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 1px -2px 27px 3px rgba(0,0,0,0.75);
+  box-shadow: inset 1px -2px 27px 3px rgba(0,0,0,0.75);
+
+
+}
