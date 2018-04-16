@@ -3,40 +3,17 @@ body {/*there must be nooo body*/
   display: flex;
   justify-content: center;
   vertical-align: middle;
+  width:100%;
   background: url("https://sky-wall.ru/uploads/source/2016/07/preview/9e3738016c7423664cdaf9b57530c8c6.jpg");
 }
-img {
-  width: 50px;
-  height: 50px;
-  top: -68px;
-  position: absolute;
-  z-index: 0;
-  display: flex;
-}
-#allLogo {
-  top: 0;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-left-width: 130px;
-  border-right-width: 130px;
-  border-top: 100px solid rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-}
-#logo {
-  font-size: 23px;
-  font-family: 'Rammetto One', cursive;
-  position: absolute;
-  display: flex;
-  top: -115px;
-  color: #0489b1;
-  letter-spacing: 5px;
-  z-index: 3;
-}
-#vhodichi {
-  justify-content: center;
+
+
+.error{
+  font-family: Raleway;
+  font-size: 13px;
+  color:#B8860B;
+  position:absolute;
+  top:43%;
 }
 .circle-block {
   width: 550px;
@@ -46,7 +23,8 @@ img {
   background: rgba(0,0,0,0.7);
   position: absolute;
   justify-content: center;
-  top: 14.6%;
+  top: 14%;
+  left:calc(50% - 250px);
   -webkit-box-shadow: inset 2px -1px 24px 5px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 2px -1px 24px 5px rgba(0,0,0,0.75);
   box-shadow: inset 2px -1px 24px 5px rgba(0,0,0,0.75);

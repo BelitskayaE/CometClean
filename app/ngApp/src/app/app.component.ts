@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from './http.service';
 
+
+
 interface User {
     email: string;
     name: string;
