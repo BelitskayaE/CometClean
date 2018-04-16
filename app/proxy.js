@@ -1,9 +1,21 @@
 let path = require('path');
+let fs = require('fs');
 
 module.exports = function (app) {
     app.get('/app*', function (req, res) {
         res.sendFile(path.join(__base, '/app/ngApp/dist/index.html'));
     });
+
+    //get Data
+    app.get('/api/json/getUserInfo', function(req, res){
+        var content = fs.readFileSync(path.join(__base, '/app/backend/data/user.json'));
+        var users = JSON.parse(content);
+        res.send(users);
+
+        }
+    );
+
+
 
 
     /**** Example ***

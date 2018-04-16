@@ -1,0 +1,20 @@
+{
+  "access" : [
+    {
+      "email": "mariapoliss@mail.ru",
+      "password": "Password"
+    },
+    {
+      "email": "elizabelenko@icloud.com",
+      "password": "Password1"
+    },
+    {
+      "email": "thiefslaw69@rambler.ru",
+      "password": "Password2"
+    },
+    {
+      "email": "kidrauhl@yandex.ru",
+      "password": "Password3"
+    }
+    ]
+  }

@@ -1,0 +1,22 @@
+{
+  "dialog": [
+    {
+      "users": [
+        {"user" : "mariapoliss@mail.ru"},
+        {"user" : "elizabelenko@icloud.com"}
+      ],
+      "messages": [
+        {
+          "from": "users[0]",
+          "time": "00:11:32 Sat 2 Apr 2018",
+          "text": "Hello, Liza!"
+        },
+        {
+          "from": "users[1]",
+          "time": "00:11:33 Sat 2 Apr 2018",
+          "text": "Hello, Masha!"
+        }
+      ]
+    }
+  ]
+}

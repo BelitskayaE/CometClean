@@ -1,0 +1,36 @@
+{
+  "users":[
+    {
+      "email": "mariapoliss@mail.ru",
+      "name": "Maria",
+      "surname": "Polishchuk",
+      "login": "mariapoliss",
+      "status": "busy",
+      "profile_foto": "path"
+    },
+    {
+      "email": "elizabelenko@icloud.com",
+      "name": "Eliza",
+      "surname": "Belenko",
+      "login": "lizomrr",
+      "status": "online",
+      "profile_foto": "path"
+    },
+    {
+      "email": "thiefslaw69@rambler.ru",
+      "name": "Roman",
+      "surname": "Bzengzhihtigevich",
+      "login": "thiefslaw",
+      "status": "online",
+      "profile_foto": "path"
+    },
+    {
+      "email": "kidrauhl@yandex.ru",
+      "name": "Justin",
+      "surname": "Bieber",
+      "login": "neversaynever",
+      "status": "busy",
+      "profile_foto": "path"
+    }
+  ]
+}
