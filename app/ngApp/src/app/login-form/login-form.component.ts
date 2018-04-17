@@ -24,8 +24,9 @@ export class LoginFormComponent implements OnInit {
   }
   createForm() {
     this.log_in = this.fb.group({
-      login: ['', Validators.required ], // <--- the FormControl called "name"
-      password: ['', Validators.required ],
+      login: ['', Validators.required,
+        Validators.pattern(/[A-z]/)], // <--- the FormControl called "name"
+      password: ['', Validators.compose([Validators.required,Validators.minLength(8)])] ,
     });
   }
   isControlInvalid(controlName: string): boolean {

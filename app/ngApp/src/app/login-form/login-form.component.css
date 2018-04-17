@@ -7,14 +7,24 @@ body {/*there must be nooo body*/
   background: url("https://sky-wall.ru/uploads/source/2016/07/preview/9e3738016c7423664cdaf9b57530c8c6.jpg");
 }
 
+input.ng-touched.ng-invalid{
 
+  border: 2px solid #B8860B;
+}
 .error{
   font-family: Raleway;
   font-size: 13px;
   color:#B8860B;
   position:absolute;
-  top:43%;
+
 }
+.login{
+  top:32%;
+}
+.password{
+  top:45%;
+}
+
 .circle-block {
   width: 550px;
   height: 550px;

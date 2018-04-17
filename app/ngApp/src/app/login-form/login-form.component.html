@@ -5,9 +5,9 @@
     <h1>Welcome to Comet</h1>
 
     <input id="inp1"  class="vhod-input form-control" placeholder="Login" formControlName="login"   >
-     <div class="error"  *ngIf="isControlInvalid('login')">Incorrect data</div>
+     <div class="error login"  *ngIf="isControlInvalid('login')">Incorrect login</div>
     <input id="inp2"   class="vhod-input  form-control" placeholder="Password" formControlName="password"  >
-    <div class="error"  *ngIf="isControlInvalid('password')">Incorrect data</div>
+    <div class="error password"  *ngIf="isControlInvalid('password')">Incorrect password</div>
     <section class="btns">
       <div id="abtn" (click)="onSubmit()"  ><a routerLink="/">
         <div class="front">Log in</div>
