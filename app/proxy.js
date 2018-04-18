@@ -7,10 +7,11 @@ module.exports = function (app) {
     });
 
     //get Data
-    app.get('/api/json/getUserInfo', function(req, res){
+    app.get('/getUserInfo', function(req, res){
         var content = fs.readFileSync(path.join(__base, '/app/backend/data/user.json'));
-        var users = JSON.parse(content);
-        res.send(users);
+        var user = JSON.parse(content);
+        //console.log(user[0]);
+        res.send(user);
 
         }
     );

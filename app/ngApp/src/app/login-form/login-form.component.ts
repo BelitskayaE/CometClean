@@ -24,9 +24,8 @@ export class LoginFormComponent implements OnInit {
   }
   createForm() {
     this.log_in = this.fb.group({
-      login: ['', Validators.required,
-        Validators.pattern(/[A-z]/)], // <--- the FormControl called "name"
-      password: ['', Validators.compose([Validators.required,Validators.minLength(8)])] ,
+      login: [''], // <--- the FormControl called "name"
+      password: ['']
     });
   }
   isControlInvalid(controlName: string): boolean {
@@ -39,20 +38,21 @@ export class LoginFormComponent implements OnInit {
 
 
   onSubmit() {
-    const controls = this.log_in.controls;
 
-    /** Проверяем форму на валидность */
+    let controls = this.log_in.controls;
     if (this.log_in.invalid) {
-      /** Если форма не валидна, то помечаем все контролы как touched*/
       Object.keys(controls)
         .forEach(controlName => controls[controlName].markAsTouched());
 
-      /** Прерываем выполнение метода*/
       return;
     }
+    else{
+      console.log(this.log_in.value);
+      //
 
-    /** TODO: Обработка данных формы */
-    console.log(this.log_in.value);
+    }
+
+
   }
 
 }

@@ -14,14 +14,14 @@ import {FriendInfoComponent} from "./friend-info/friend-info.component";
 let defaultRoot = 'app';
 
 const routes: Routes = [
-  {path: '', component: IndexComponent},
-  {path: 'registration', component: SignUpFormComponent},
-  {path: 'login', component: LoginFormComponent},
-  {path: 'new_password', component: NewPasswordFormComponent},
-  {path: 'aliving_code', component: CodeChangeFormComponent},
-  {path: 'aliving_email', component: EmailForCodeFormComponent},
-  {path: 'error', component: ErrorPageComponent},
-  {path: ''+'friend_info', component: FriendInfoComponent}
+  {path: defaultRoot+'', component: IndexComponent},
+  {path: defaultRoot+'/registration', component: SignUpFormComponent},
+  {path: defaultRoot+'/login', component: LoginFormComponent},
+  {path: defaultRoot+'/new_password', component: NewPasswordFormComponent},
+  {path: defaultRoot+'/aliving_code', component: CodeChangeFormComponent},
+  {path: defaultRoot+'/aliving_email', component: EmailForCodeFormComponent},
+  {path: defaultRoot+'/error', component: ErrorPageComponent},
+  {path: defaultRoot+'/friend_info', component: FriendInfoComponent}
 ];
 
 @NgModule({

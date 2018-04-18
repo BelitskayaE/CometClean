@@ -1,5 +1,4 @@
-{
-  "users":[
+[
     {
       "email": "mariapoliss@mail.ru",
       "name": "Maria",
@@ -33,4 +32,3 @@
       "profile_foto": "path"
     }
   ]
-}

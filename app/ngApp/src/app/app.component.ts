@@ -19,13 +19,14 @@ interface User {
   providers: [HttpService]
 })
 export class AppComponent implements OnInit{
-  user: User[] = [];
+  user: User;
+  count: number;
 
   constructor(private httpService: HttpService){}
 
   ngOnInit(){
     this.httpService.getUserInfo()
-      .subscribe((user: User[])=>{
+      .subscribe((user: User)=>{
       this.user = user;
       console.log(user);
     }
