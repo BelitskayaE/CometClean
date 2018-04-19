@@ -9,12 +9,12 @@ body {/*there must be nooo body*/
 
 input.ng-touched.ng-invalid{
 
-  border: 2px solid #B8860B;
+  border: 2px solid #FA5858;
 }
 .error{
   font-family: Raleway;
   font-size: 13px;
-  color:#B8860B;
+  color:#FA5858;
   position:absolute;
 
 }

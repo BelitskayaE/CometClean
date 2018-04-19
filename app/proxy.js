@@ -12,7 +12,17 @@ module.exports = function (app) {
         var user = JSON.parse(content);
         //console.log(user[0]);
         res.send(user);
+        }
+    );
 
+    app.post('/login_user', access, function(req, res){
+
+        var check = false;
+        if (){//true login and password
+            check = true;
+        }
+
+        res.send(check);
         }
     );
 
