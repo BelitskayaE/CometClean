@@ -1,5 +1,7 @@
 let path = require('path');
 let fs = require('fs');
+let bodyParser = require('body-parser');
+var codedParser = bodyParser.urlencoded({extended: false});
 
 module.exports = function (app) {
     app.get('/app*', function (req, res) {
@@ -15,14 +17,21 @@ module.exports = function (app) {
         }
     );
 
-    app.post('/login_user', access, function(req, res){
-
+    app.post('/login_user', codedParser, function(req, res){
+        //console.log(req.body.login);
+        var content = fs.readFileSync(path.join(__base, '/app/backend/access/access.json'));
+        var users = JSON.parse(content);
+        console.log(users);
         var check = false;
-        if (){//true login and password
-            check = true;
+        for (let i=0; i < users.length; i++){
+            if (req.body.login === users[i].login && req.body.password === users[i].password){//true login and password
+                check = true;
+                break;
+            }
         }
-
         res.send(check);
+
+
         }
     );
 

@@ -1,20 +1,18 @@
-{
-  "access" : [
+[
     {
-      "email": "mariapoliss@mail.ru",
+      "login": "mariapoliss",
       "password": "Password"
     },
     {
-      "email": "elizabelenko@icloud.com",
+      "login": "elizabel",
       "password": "Password1"
     },
     {
-      "email": "thiefslaw69@rambler.ru",
+      "login": "thiefslaw69",
       "password": "Password2"
     },
     {
-      "email": "kidrauhl@yandex.ru",
+      "login": "kidrauhl",
       "password": "Password3"
     }
-    ]
-  }
+]

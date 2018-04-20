@@ -12,8 +12,8 @@ export class HttpService {
     return this.http.get(this.serverApi + '/getUserInfo');
   }
 
-  checkUser() {
-    return this.http.get(this.serverApi + '/login_user');
+  checkUser(data) {
+    return this.http.post(this.serverApi + '/login_user', data);
   }
 
 }

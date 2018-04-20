@@ -7,12 +7,13 @@
     <input id="inp1" type="text" class="vhod-input form-control" placeholder="Login" formControlName="login"/>
      <div *ngIf="isControlInvalid('login')" class="error login">Incorrect login</div>
     <input id="inp2" type="password"  class="vhod-input form-control" placeholder="Password" formControlName="password"/>
-    <!--<div *ngIf="isControlInvalid('password')" class="error password">Incorrect symbols</div>-->
+    <div *ngIf="!checkerAuth" class="error password">Incorrect login or password</div>
     <section class="btns"><a (click)="onSubmit()">
       <div id="abtn">
         <div class="front">Log in</div>
         <div class="back">Log in</div>
       </div></a>
+
     </section>
 
     <div id="registr" class="fpass" ><a routerLink="/registration">Don't have an account yet?</a></div>
