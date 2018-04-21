@@ -13,7 +13,11 @@ export class HttpService {
   }
 
   checkUser(data) {
-    return this.http.post(this.serverApi + '/login_user', data);
+    return this.http.post(this.serverApi + '/api/loginUser', data);
+  }
+
+  authUser(login){
+    return this.http.post(this.serverApi + '/app/authUser', login);
   }
 
 }

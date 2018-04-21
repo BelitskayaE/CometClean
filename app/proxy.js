@@ -16,8 +16,8 @@ module.exports = function (app) {
         res.send(user);
         }
     );
-
-    app.post('/login_user', codedParser, function(req, res){
+    //check if user and his password is true
+    app.post('/api/loginUser', codedParser, function(req, res){
         //console.log(req.body.login);
         var content = fs.readFileSync(path.join(__base, '/app/backend/access/access.json'));
         var users = JSON.parse(content);
@@ -30,8 +30,12 @@ module.exports = function (app) {
             }
         }
         res.send(check);
+        }
+    );
 
-
+    app.post('/app/authUser', codedParser, function(req,res){
+        //console.log(req.body);
+        res.redirect(200,'/app');
         }
     );
 

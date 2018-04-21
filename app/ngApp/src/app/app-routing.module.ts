@@ -21,7 +21,8 @@ const routes: Routes = [
   {path: defaultRoot + '/aliving_code', component: CodeChangeFormComponent},
   {path: defaultRoot + '/aliving_email', component: EmailForCodeFormComponent},
   {path: defaultRoot + '**', component: ErrorPageComponent},
-  {path: defaultRoot + '/friend_info', component: FriendInfoComponent}
+  {path: defaultRoot + '/friend_info', component: FriendInfoComponent},
+  //{path: defaultRoot + '/login', redirectTo: 'defaultRoot'}
 ];
 
 @NgModule({

@@ -60,13 +60,15 @@ export class LoginFormComponent implements OnInit {
       if (this.checkerData) {//true login and password
         console.log('if');
         //redirectTo
+        this.httpService.authUser(this.log_in.get('login').value)
+          .subscribe();
       } else {
         console.log('else');
         this.checkerAuth = false;
         return;
       }
     }
-    console.log(this.checkerData);
+    //console.log(this.checkerData);
 
 
   }
