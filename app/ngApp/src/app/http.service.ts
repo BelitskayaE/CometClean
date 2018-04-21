@@ -8,8 +8,8 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  getUserInfo() {
-    return this.http.get(this.serverApi + '/getUserInfo');
+  loadUserInfo(login) {
+    return this.http.post(this.serverApi + '/api/postUserInfo', login);
   }
 
   checkUser(data) {

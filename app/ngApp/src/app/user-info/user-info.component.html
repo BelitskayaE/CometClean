@@ -3,12 +3,12 @@
 
   <div id="user_info_text">
 
-    <span class="name_surname">Name Surname</span>
+    <span class="name_surname">{{user.name}} {{user.surname}}</span>
     <span class="login">@{{user.login}}</span>
 
     <a class="edit_button">edit</a>
 
-    <p class="status">Online</p>
+    <p class="status">{{user.status}}</p>
 
 
   </div>
@@ -18,3 +18,4 @@
     </div>
   </div>
 </div>
+<div><h1>{{cookieLogin}}</h1></div>

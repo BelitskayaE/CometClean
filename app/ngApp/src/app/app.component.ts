@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from './http.service';
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -19,18 +20,21 @@ interface User {
   providers: [HttpService]
 })
 export class AppComponent implements OnInit{
+  //cookieLogin = 'UNKNOWN';
   user: User;
-  count: number;
 
-  constructor(private httpService: HttpService){}
+  constructor(private cookieService: CookieService, private httpService: HttpService){}
 
   ngOnInit(){
-    this.httpService.getUserInfo()
+    /*
+    //this.cookieService.set('Test', 'lalala');
+    this.cookieLogin = this.cookieService.get('login');
+    this.httpService.loadUserInfo()
       .subscribe((user: User)=>{
       this.user = user;
-      console.log(user);
+      //console.log(user);
     }
-    );
+    );*/
   }
 
 

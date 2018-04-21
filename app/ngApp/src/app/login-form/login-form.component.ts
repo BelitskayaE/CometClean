@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {HttpService} from '../http.service';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login-form',
@@ -8,6 +9,7 @@ import {HttpService} from '../http.service';
   styleUrls: ['./login-form.component.css', '../app.component.css']
 })
 export class LoginFormComponent implements OnInit {
+  cookieValue: string;
   log_in: FormGroup;
   checkerData: Boolean = false;
   checkerAuth: Boolean = true;
@@ -16,7 +18,7 @@ export class LoginFormComponent implements OnInit {
 
   }
 
-  constructor(private fb: FormBuilder, private httpService: HttpService) { // <--- inject FormBuilder
+  constructor(private fb: FormBuilder, private cookieService: CookieService, private httpService: HttpService) { // <--- inject FormBuilder
     this.createForm();
   }
 
@@ -59,7 +61,10 @@ export class LoginFormComponent implements OnInit {
         );
       if (this.checkerData) {//true login and password
         console.log('if');
-        //redirectTo
+
+        this.cookieService.set('login', this.log_in.get('login').value);
+        this.cookieValue = this.cookieService.get('login');
+        //redirectTo - HOW CAN I DO REDIRECT???
         this.httpService.authUser(this.log_in.get('login').value)
           .subscribe();
       } else {

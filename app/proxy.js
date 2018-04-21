@@ -9,10 +9,20 @@ module.exports = function (app) {
     });
 
     //get Data
-    app.get('/getUserInfo', function(req, res){
-        var content = fs.readFileSync(path.join(__base, '/app/backend/data/user.json'));
-        var user = JSON.parse(content);
-        //console.log(user[0]);
+    app.post('/api/postUserInfo', function(req, res){
+        var content = fs.readFileSync(path.join(__base, '/app/backend/users/users.json'));
+        var users = JSON.parse(content);
+        console.log(req.body.cookieLogin);//why is it undefined?
+        var user;
+        for (let i=0; i < users.length; i++){
+            if (req.body.cookieLogin === users[i].login){
+                user = JSON.stringify(users[i]);
+                console.log('hi');
+                user = JSON.parse(user);
+                break;
+            }
+        }
+        console.log(user);
         res.send(user);
         }
     );
@@ -21,7 +31,7 @@ module.exports = function (app) {
         //console.log(req.body.login);
         var content = fs.readFileSync(path.join(__base, '/app/backend/access/access.json'));
         var users = JSON.parse(content);
-        console.log(users);
+        //console.log(users);
         var check = false;
         for (let i=0; i < users.length; i++){
             if (req.body.login === users[i].login && req.body.password === users[i].password){//true login and password
