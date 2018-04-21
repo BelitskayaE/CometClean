@@ -1,6 +1,7 @@
 let path = require('path');
 let fs = require('fs');
 let bodyParser = require('body-parser');
+
 var codedParser = bodyParser.urlencoded({extended: false});
 
 module.exports = function (app) {
@@ -12,6 +13,7 @@ module.exports = function (app) {
     app.post('/api/postUserInfo', function(req, res){
         var content = fs.readFileSync(path.join(__base, '/app/backend/users/users.json'));
         var users = JSON.parse(content);
+        res.cookie('Test', 'Testing');
         console.log(req.body.cookieLogin);//why is it undefined?
         var user;
         for (let i=0; i < users.length; i++){
@@ -23,7 +25,7 @@ module.exports = function (app) {
             }
         }
         console.log(user);
-        res.send(user);
+        //res.send(user);
         }
     );
     //check if user and his password is true

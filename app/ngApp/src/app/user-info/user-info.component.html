@@ -1,4 +1,4 @@
-<div *ngIf="user" id="user_info" class="dark_block">
+<div id="user_info" class="dark_block"><!--*ngIf="user"-->
   <div><img class="profile_foto" src={{personalImage}}/></div>
 
   <div id="user_info_text">
@@ -14,7 +14,7 @@
   </div>
   <div class="containe">
     <div class="contents">
-      <p class="btn"><a routerLink="login">Logout</a></p>
+      <p class="btn"><a (click)="logout()">Logout</a></p>
     </div>
   </div>
 </div>

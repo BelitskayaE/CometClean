@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from './http.service';
 import { CookieService } from 'ngx-cookie-service';
-
+import {Router} from '@angular/router';
 
 
 interface User {
@@ -23,9 +23,16 @@ export class AppComponent implements OnInit{
   //cookieLogin = 'UNKNOWN';
   user: User;
 
-  constructor(private cookieService: CookieService, private httpService: HttpService){}
+  constructor(
+    private cookieService: CookieService,
+    private httpService: HttpService,
+    private router: Router){}
 
   ngOnInit(){
+    if (!this.cookieService.get('login')){
+      this.router.navigateByUrl('/app/login');
+    }
+
     /*
     //this.cookieService.set('Test', 'lalala');
     this.cookieLogin = this.cookieService.get('login');
