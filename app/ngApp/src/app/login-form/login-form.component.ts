@@ -32,7 +32,7 @@ export class LoginFormComponent implements OnInit {
 
   createForm() {
     this.log_in = this.fb.group({
-      login: ['', [Validators.required, Validators.minLength(6), Validators.pattern(/^[A-z0-9@.]*$/)]], // <--- the FormControl called "login"
+      login: ['', [Validators.required, Validators.minLength(6), Validators.pattern(/^[A-z0-9.]*$/)]], // <--- the FormControl called "login"
       password: ['', [Validators.required, Validators.minLength(8), Validators.pattern(/^[A-z0-9*]*$/)]]
     });
   }

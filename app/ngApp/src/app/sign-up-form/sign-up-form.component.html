@@ -1,18 +1,22 @@
 
 
-<section id='formareg'   class="circle-block animated">
+<section *ngIf="sign_up" [formGroup]="sign_up" id='formareg'   class="circle-block animated">
 
   <h1>Welcome to Comet</h1>
 
-  <input id="inp3"    class="vhod-input" placeholder="Full name">
-
-  <input id="inp4"  class="vhod-input" placeholder="Login">
-  <input id="inp5"  class="vhod-input" placeholder="Email">
-  <input id="inp6"  type="password" class="vhod-input" placeholder="Password">
-  <input id="inp7"  type="password" class="vhod-input" placeholder="Repeat password ">
+  <input id="inp3" type="text" class="vhod-input form-control" placeholder="Full name" formControlName="fullName">
+  <div *ngIf="isInputInvalid('fullName')" class="error full-name">Incorrect symbols</div>
+  <input id="inp4" type="text" class="vhod-input form-control" placeholder="Login" formControlName="login">
+  <div *ngIf="isInputInvalid('login')" class="error login-reg">Incorrect login</div>
+  <input id="inp5" type="text" class="vhod-input form-control" placeholder="Email" formControlName="email">
+  <div *ngIf="isEmailInvalid('email')" class="error email">Incorrect email</div>
+  <input id="inp6" type="password" class="vhod-input form-control" placeholder="Password" formControlName="password">
+  <div *ngIf="isInputInvalid('password')" class="error password-reg">Incorrect password</div>
+  <input id="inp7" type="password" class="vhod-input form-control" placeholder="Repeat password" formControlName="repPassword">
+  <div *ngIf="isRepPasswordInvalid('password','repPassword')" class="error password-reg-repeat">Passwords do not match</div>
 
   <section class="btns" style="top:78%">
-    <div id="abtn"   ><a routerLink="">
+    <div id="abtn"   ><a (click)="onSubmit()">
       <div class="front">Sign up</div>
       <div class="back">Sign up</div></a>
     </div>

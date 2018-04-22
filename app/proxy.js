@@ -9,7 +9,15 @@ module.exports = function (app) {
         res.sendFile(path.join(__base, '/app/ngApp/dist/index.html'));
     });
 
-    //get Data
+    app.post('/api/registration', function(req,res){
+        var content = fs.readFileSync(path.join(__base, '/app/backend/users/users.json'));
+        var users = JSON.parse(content);
+
+
+        }
+    );
+
+    //get data about user to user-info component
     app.post('/api/postUserInfo', function(req, res){
         var content = fs.readFileSync(path.join(__base, '/app/backend/users/users.json'));
         var users = JSON.parse(content);
@@ -28,7 +36,7 @@ module.exports = function (app) {
         //res.send(user);
         }
     );
-    //check if user and his password is true
+    //check if user and his password is true, returns true or false
     app.post('/api/loginUser', codedParser, function(req, res){
         //console.log(req.body.login);
         var content = fs.readFileSync(path.join(__base, '/app/backend/access/access.json'));
@@ -44,7 +52,7 @@ module.exports = function (app) {
         res.send(check);
         }
     );
-
+    //does not work
     app.post('/app/authUser', codedParser, function(req,res){
         //console.log(req.body);
         res.redirect(200,'/app');
