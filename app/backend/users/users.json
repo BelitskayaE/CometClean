@@ -1,33 +1,29 @@
 [
     {
       "email": "mariapoliss@mail.ru",
-      "name": "Maria",
-      "surname": "Polishchuk",
+      "name": "Maria Polishchuk",
       "login": "mariapoliss",
       "status": "busy",
       "profile_foto": "path"
     },
     {
       "email": "elisabelenko@icloud.com",
-      "name": "Elisa",
-      "surname": "Belitskaya",
+      "name": "Elisa Belitskaya",
       "login": "lizomrr",
       "status": "online",
       "profile_foto": "path"
     },
     {
       "email": "thiefslaw69@rambler.ru",
-      "name": "Roman",
-      "surname": "Bzengzhihtigevich",
+      "name": "Roman Bzengzhihtigevich",
       "login": "thiefslaw",
       "status": "online",
       "profile_foto": "path"
     },
     {
       "email": "kidrauhl@yandex.ru",
-      "name": "Justin",
-      "surname": "Bieber",
-      "login": "neversaynever",
+      "name": "Justin Bieber",
+      "login": "kidrauhl",
       "status": "busy",
       "profile_foto": "path"
     }

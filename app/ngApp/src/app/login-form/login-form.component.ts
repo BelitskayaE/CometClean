@@ -57,30 +57,30 @@ export class LoginFormComponent implements OnInit {
         .forEach(controlName => controls[controlName].markAsTouched());
       //return;
     } else {
-      console.log(this.log_in.value);
-      console.log(this.log_in.status);
+      //console.log(this.log_in.value);
+      //console.log(this.log_in.status);
       /*function checker existency of user and true password*/
       //console.log('controls:'+ controls);
 
       this.httpService.checkUser(this.log_in.value)
         .subscribe((checkerData: Boolean) => {
-            this.checkerData = checkerData;
+            //this.checkerData = checkerData;
+            if (checkerData) {//true login and password
+              //console.log('if');
+
+              this.cookieService.set('login', this.log_in.get('login').value);
+              this.cookieValue = this.cookieService.get('login');
+              //redirectTo - HOW CAN I DO REDIRECT???
+              //this.httpService.authUser(this.log_in.get('login').value)
+              //  .subscribe();
+              this.router.navigateByUrl('/app');
+            } else {
+              //console.log('else');
+              this.checkerAuth = false;
+              return;
+            }
           }
         );
-      if (this.checkerData) {//true login and password
-        console.log('if');
-
-        this.cookieService.set('login', this.log_in.get('login').value);
-        this.cookieValue = this.cookieService.get('login');
-        //redirectTo - HOW CAN I DO REDIRECT???
-        this.httpService.authUser(this.log_in.get('login').value)
-          .subscribe();
-        this.router.navigateByUrl('/app');
-      } else {
-        console.log('else');
-        this.checkerAuth = false;
-        return;
-      }
     }
     //console.log(this.checkerData);
 

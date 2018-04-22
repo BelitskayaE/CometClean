@@ -1,42 +1,59 @@
-{
-  "contacts": [
-    {
-      "user": "mariapoliss@mail.ru",
-      "friends": [
-        {
-          "email": "elizabelenko@icloud.com"
-        },
-        {
-          "email": "kidrauhl@yandex.ru"
-        }
-      ]
-    },
-    {
-      "user": "elizabelenko@icloud.com",
-      "friends": [
-        {
-          "email": "thiefslaw69@rambler.ru"
-        },
-        {
-          "email": "mariapoliss@mail.ru"
-        }
-      ]
-    },
-    {
-      "user": "thiefslaw69@rambler.ru",
-      "friends": [
-        {
-          "email": "elizabelenko@icloud.com"
-        }
-      ]
-    },
-    {
-      "user": "kidrauhl@yandex.ru",
-      "friends": [
-        {
-          "email": "mariapoliss@mail.ru"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "login": "mariapoliss",
+    "friends": [
+      {
+        "login": "lizomrr"
+      },
+      {
+        "login": "kidrauhl"
+      }
+    ]
+  },
+  {
+    "login": "lizomrr",
+    "friends": [
+      {
+        "login": "thiefslaw"
+      },
+      {
+        "login": "mariapoliss"
+      },
+      {
+        "login": "thiefslaw"
+      },
+      {
+        "login": "mariapoliss"
+      },
+      {
+        "login": "thiefslaw"
+      },
+      {
+        "login": "mariapoliss"
+      },
+      {
+        "login": "thiefslaw"
+      },
+      {
+        "login": "mariapoliss"
+      }
+    ]
+  },
+  {
+    "login": "thiefslaw",
+    "friends": [
+      {
+        "login": "lizomrr"
+      }
+    ]
+  },
+  {
+    "login": "kidrauhl",
+    "friends": [
+      {
+        "login": "mariapoliss"
+      }
+    ]
+  }
+]
+

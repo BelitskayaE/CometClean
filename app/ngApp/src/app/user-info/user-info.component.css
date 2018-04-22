@@ -11,6 +11,13 @@
   border-radius: 50%;
 }
 
+a {
+  outline: 0 none !important;
+}
+
+a:hover {
+  cursor: pointer;
+}
 
 #user_info{
   height: 25%;

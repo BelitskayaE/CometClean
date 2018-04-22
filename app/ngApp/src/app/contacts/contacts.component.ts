@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpService} from '../http.service';
 
 @Component({
   selector: 'app-contacts',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   '../app.component.css']
 })
 export class ContactsComponent implements OnInit {
+  contacts: string[];
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
 
   ngOnInit() {
+    this.httpService.getContacts()
+      .subscribe((contacts: string[])=>{
+          this.contacts = contacts;
+        }
+      );
   }
 
 }

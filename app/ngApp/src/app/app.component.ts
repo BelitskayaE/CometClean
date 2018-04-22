@@ -7,7 +7,6 @@ import {Router} from '@angular/router';
 interface User {
     email: string;
     name: string;
-    surname: string;
     login: string;
     status: string;
     profile_foto: string;
@@ -32,16 +31,6 @@ export class AppComponent implements OnInit{
     if (!this.cookieService.get('login')){
       this.router.navigateByUrl('/app/login');
     }
-
-    /*
-    //this.cookieService.set('Test', 'lalala');
-    this.cookieLogin = this.cookieService.get('login');
-    this.httpService.loadUserInfo()
-      .subscribe((user: User)=>{
-      this.user = user;
-      //console.log(user);
-    }
-    );*/
   }
 
 

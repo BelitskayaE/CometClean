@@ -6,7 +6,6 @@ import {Router} from '@angular/router'
 interface User {
   email: string;
   name: string;
-  surname: string;
   login: string;
   status: string;
   profile_foto: string;
@@ -20,7 +19,6 @@ interface User {
 
 
 export class UserInfoComponent implements OnInit {
-  cookieLogin: string;
   user: User;
   personalImage: any = '../../assets/profile_foto.png';
 
@@ -30,8 +28,7 @@ export class UserInfoComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
-    this.cookieLogin = this.cookieService.get('login');
-    this.httpService.loadUserInfo(this.cookieLogin)
+    this.httpService.loadUserInfo()
       .subscribe((user: User)=>{
           this.user = user;
           //console.log(user);
@@ -40,7 +37,7 @@ export class UserInfoComponent implements OnInit {
   }
 
   logout(){
-    this.cookieService.delete('login');//or deleteAll();
+    this.cookieService.deleteAll('login');//or deleteAll();
     this.router.navigateByUrl('/app/login');
   }
 
