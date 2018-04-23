@@ -7,12 +7,15 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "@types/socket.io-client": "^1.4.32",
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
     "https": "*",
     "json5": "*",
-    "request-promise": "4.2.2"
+    "request-promise": "4.2.2",
+    "socket.io": "^2.1.0",
+    "socket.io-client": "^2.1.0"
   },
   "devDependencies": {
     "@angular/cli": "^1.7.4",
